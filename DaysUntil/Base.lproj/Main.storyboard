@@ -18,24 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="q0o-Jt-gJ3">
-                                <rect key="frame" x="20" y="30" width="560" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="491788740.84082502">
-                                    <!--2016-08-01 23:59:00 +0000-->
-                                </date>
-                            </datePicker>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dvL-Ig-V9M">
                                 <rect key="frame" x="20" y="364" width="560" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="491788740.84082502">
                                     <!--2016-08-01 23:59:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="days apart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASr-Fh-Hod">
-                                <rect key="frame" x="20" y="266" width="560" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 days apart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASr-Fh-Hod">
+                                <rect key="frame" x="20" y="285.5" width="560" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="q0o-Jt-gJ3">
+                                <rect key="frame" x="20" y="28" width="560" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="491788740.84082502">
+                                    <!--2016-08-01 23:59:00 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -50,6 +50,7 @@
                             <constraint firstItem="q0o-Jt-gJ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eHs-7i-uGc"/>
                             <constraint firstItem="ASr-Fh-Hod" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gZy-d0-QKX"/>
                             <constraint firstItem="dvL-Ig-V9M" firstAttribute="top" secondItem="ASr-Fh-Hod" secondAttribute="bottom" constant="30" id="kUA-2l-J4M"/>
+                            <constraint firstItem="ASr-Fh-Hod" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mGL-Uf-8cW"/>
                             <constraint firstItem="ASr-Fh-Hod" firstAttribute="top" secondItem="q0o-Jt-gJ3" secondAttribute="bottom" constant="30" id="tY7-gj-kcD"/>
                             <constraint firstItem="ASr-Fh-Hod" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zRI-Fo-BCV"/>
                         </constraints>
