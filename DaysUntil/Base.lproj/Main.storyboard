@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaysUntil" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="q0o-Jt-gJ3">
+                                <rect key="frame" x="20" y="30" width="560" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="491788740.84082502">
+                                    <!--2016-08-01 23:59:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dvL-Ig-V9M">
+                                <rect key="frame" x="20" y="364" width="560" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="491788740.84082502">
+                                    <!--2016-08-01 23:59:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="days apart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASr-Fh-Hod">
+                                <rect key="frame" x="20" y="266" width="560" height="68"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="q0o-Jt-gJ3" secondAttribute="trailing" id="15Z-RT-l2h"/>
+                            <constraint firstItem="ASr-Fh-Hod" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2E5-fj-2gP"/>
+                            <constraint firstItem="dvL-Ig-V9M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ACH-l3-rg9"/>
+                            <constraint firstItem="dvL-Ig-V9M" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FT2-Ok-kcp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dvL-Ig-V9M" secondAttribute="bottom" constant="20" id="NnO-L4-qgL"/>
+                            <constraint firstItem="q0o-Jt-gJ3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="PFb-vt-ryQ"/>
+                            <constraint firstItem="ASr-Fh-Hod" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W0t-GB-x7D"/>
+                            <constraint firstItem="ASr-Fh-Hod" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZcT-RE-8xQ"/>
+                            <constraint firstItem="q0o-Jt-gJ3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eHs-7i-uGc"/>
+                            <constraint firstItem="ASr-Fh-Hod" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gZy-d0-QKX"/>
+                            <constraint firstItem="dvL-Ig-V9M" firstAttribute="top" secondItem="ASr-Fh-Hod" secondAttribute="bottom" constant="30" id="kUA-2l-J4M"/>
+                            <constraint firstItem="ASr-Fh-Hod" firstAttribute="top" secondItem="q0o-Jt-gJ3" secondAttribute="bottom" constant="30" id="tY7-gj-kcD"/>
+                            <constraint firstItem="ASr-Fh-Hod" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zRI-Fo-BCV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="W0t-GB-x7D"/>
+                                <exclude reference="tY7-gj-kcD"/>
+                                <exclude reference="kUA-2l-J4M"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="datePicker1" destination="q0o-Jt-gJ3" id="0gp-4A-ns1"/>
+                        <outlet property="datePicker2" destination="dvL-Ig-V9M" id="tpZ-JL-mgQ"/>
+                        <outlet property="daysApartLabel" destination="ASr-Fh-Hod" id="QDd-J1-xNt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="387" y="344"/>
         </scene>
     </scenes>
 </document>
